@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#F5F7FA"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="#00A5B5">
+
+        <ImageView
+            android:id="@+id/back"
+            android:src="@drawable/ic_back"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+        <TextView
+            android:text="Keuangan"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"/>
+    </RelativeLayout>
+
+    <!-- CARD HEADER MENU -->
+    <LinearLayout
+        android:id="@+id/cardMenu"
+        android:layout_below="@id/header"
+        android:layout_marginTop="-40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_card_large"
+        android:padding="18dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp">
+
+        <!-- TAGIHAN -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_bill"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="#E0F7F9"
+                android:padding="8dp"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:text="Tagihan"
+                android:textColor="#333"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- HUBUNGAN -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_connect"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="#E0F7F9"
+                android:padding="8dp"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:text="Hubungan"
+                android:textSize="14sp"
+                android:textColor="#333"/>
+        </LinearLayout>
+
+        <!-- VOUCHER -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_voucher"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="#E0F7F9"
+                android:padding="8dp"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:text="Voucher"
+                android:textSize="14sp"
+                android:textColor="#333"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- LIST PENGELOLAAN -->
+    <LinearLayout
+        android:layout_below="@id/cardMenu"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:text="Pengelolaan Keuangan"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1A1A1A"
+            android:layout_marginBottom="14dp"/>
+
+        <include layout="@drawable/item_keuangan_list"/>
+        <include layout="@drawable/item_keuangan_list"/>
+        <include layout="@drawable/item_keuangan_list"/>
+        <include layout="@drawable/item_keuangan_list"/>
+        <include layout="@drawable/item_keuangan_list"/>
+    </LinearLayout>
+
+</RelativeLayout>
