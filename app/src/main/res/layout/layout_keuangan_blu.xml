@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/headerContainer"
         android:layout_width="0dp"
-        android:layout_height="230dp"
+        android:layout_height="200dp"
         android:background="@drawable/header_bg_blu"
         android:orientation="vertical"
         android:gravity="center_horizontal"
