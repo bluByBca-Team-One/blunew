@@ -74,7 +74,7 @@
                     android:layout_height="24dp"
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_language"
-                    app:tint="#000000"
+                    app:tint="#00A5B5"
                     android:contentDescription="Icon Bahasa" />
 
                 <LinearLayout
@@ -125,7 +125,7 @@
                     android:layout_height="24dp"
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_moon"
-                    app:tint="#000000"
+                    app:tint="#00A5B5"
                     android:contentDescription="Icon Tema" />
 
                 <LinearLayout
@@ -150,7 +150,8 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:text="Terang"
-                    android:textColor="#666666"
+                    android:textColor="#00A5B5"
+                    android:textStyle="bold"
                     android:textSize="16sp" />
             </RelativeLayout>
 
@@ -172,7 +173,7 @@
                     android:layout_height="24dp"
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_smartphone"
-                    app:tint="#000000"
+                    app:tint="#00A5B5"
                     android:contentDescription="Icon Versi" />
 
                 <LinearLayout
@@ -197,7 +198,8 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:text="1.25.0"
-                    android:textColor="#666666"
+                    android:textColor="#00A5B5"
+                    android:textStyle="bold"
                     android:textSize="16sp" />
             </RelativeLayout>
 
@@ -232,7 +234,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_match"
+                    android:layout_height="match_parent"
                     android:padding="16dp"
                     android:src="@drawable/logo5_foreground"
                     app:tint="#00A5B5"
@@ -259,8 +261,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableTop="@drawable/ic_transaction"
-                        app:drawableTint="#FFFFFF"
+                        android:drawableTop="@drawable/logo4_foreground"
+                        app:drawableTint="#000000"
                         android:gravity="center"
                         android:text="Transaksi"
                         android:textColor="#FFFFFF"
@@ -273,8 +275,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableTop="@drawable/ic_finance"
-                        app:drawableTint="#FFFFFF"
+                        android:drawableTop="@drawable/logo3_foreground"
+                        app:drawableTint="#000000"
                         android:gravity="center"
                         android:text="Keuangan"
                         android:textColor="#FFFFFF"
@@ -304,7 +306,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableTop="@drawable/ic_history" app:drawableTint="#FFFFFF"
+                        android:drawableTop="@drawable/logo1_foreground" app:drawableTint="#000000"
                         android:gravity="center"
                         android:text="Riwayat"
                         android:textColor="#FFFFFF"
@@ -317,8 +319,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableTop="@drawable/ic_profile_active"
-                        app:drawableTint="#FFFFFF"
+                        android:drawableTop="@drawable/logo2_foreground"
+                        app:drawableTint="#000000"
                         android:gravity="center"
                         android:text="Profil"
                         android:textColor="#FFFFFF"
