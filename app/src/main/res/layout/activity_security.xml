@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA">
+
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/header_bg_blu"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pusat Keamanan"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/iconCircle"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/bg_circle_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/headerContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="-50dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_check_large"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvProtected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Akun Anda Terlindungi"
+        android:textSize="20sp"
+        android:textColor="#212121"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/iconCircle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sistem keamanan blu aktif memantau transaksi Anda 24/7 untuk mencegah aktivitas mencurigakan."
+        android:textAlignment="center"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:textColor="#606060"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tvProtected"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvProtected"
+        app:layout_constraintTop_margin="90dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvAdvanced"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:drawableStart="@drawable/ic_setting"
+        android:drawablePadding="6dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:text="Atur Keamanan Lanjutan"
+        android:textColor="#007EA7"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="532dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_pill_white"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="303dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="319dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_check"
+                tools:layout_editor_absoluteX="26dp"
+                tools:layout_editor_absoluteY="319dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="58dp"
+                tools:layout_editor_absoluteY="319dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verifikasi Perangkat"
+                    android:textColor="#212121"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="58dp"
+                    tools:layout_editor_absoluteY="319dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perangkat ini terdaftar aman"
+                    android:textColor="#777777"
+                    android:textSize="13sp"
+                    tools:layout_editor_absoluteX="58dp"
+                    tools:layout_editor_absoluteY="339dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_pill_white"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="382dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="398dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_check"
+                tools:layout_editor_absoluteX="26dp"
+                tools:layout_editor_absoluteY="398dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="58dp"
+                tools:layout_editor_absoluteY="398dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login Biometrik"
+                    android:textColor="#212121"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="58dp"
+                    tools:layout_editor_absoluteY="398dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FaceID / Fingerprint aktif"
+                    android:textColor="#777777"
+                    android:textSize="13sp"
+                    tools:layout_editor_absoluteX="58dp"
+                    tools:layout_editor_absoluteY="418dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_pill_white"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="462dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="478dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_check"
+                tools:layout_editor_absoluteX="26dp"
+                tools:layout_editor_absoluteY="478dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="58dp"
+                tools:layout_editor_absoluteY="478dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PIN Transaksi"
+                    android:textColor="#212121"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="58dp"
+                    tools:layout_editor_absoluteY="478dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diperbarui 30 hari lalu"
+                    android:textColor="#777777"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
