@@ -299,7 +299,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:drawableTopCompat="@drawable/logo4_foreground"
-                    app:drawableTint="@color/black" android:gravity="center"
+                    app:drawableTint="@color/black " android:gravity="center"
                     android:text="Transaksi"
                     android:textColor="@color/white"
                     android:textSize="10sp"/>

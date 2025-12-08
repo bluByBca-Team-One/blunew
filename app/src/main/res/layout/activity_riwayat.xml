@@ -67,7 +67,7 @@
         android:orientation="horizontal"
         android:padding="12dp">
 
-        ImageView
+        <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="8dp"

@@ -21,4 +21,7 @@
         <color name="blu_card_gray">#F0F2F5</color>
         <color name="gray_text">#888888</color>
 
+    <color name="yellow">#FFEB3B</color>
+    <color name="colorYellow">#FFEB3B</color>
+    <color name="colorOrange">#FF9800</color>
 </resources>
