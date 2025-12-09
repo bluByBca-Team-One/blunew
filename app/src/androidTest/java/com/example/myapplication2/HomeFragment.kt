@@ -65,29 +65,6 @@ class HomeFragment : Fragment() {
         }
     }
 
-    // ==================== Account Action Buttons ====================
-    private fun setupAccountActions(view: View) {
-        // Find the ConstraintLayout that contains the buttons
-        val accountInner = view.findViewById<androidx.constraintlayout.widget.ConstraintLayout>(
-            R.id.accountInner
-        )
-
-        if (accountInner != null) {
-            // Get the LinearLayout containing the buttons
-            val buttonContainer = accountInner.getChildAt(3) as? LinearLayout
-
-            // Pindah Dana Button
-            val btnPindahDana = buttonContainer?.getChildAt(0) as? AppCompatButton
-            btnPindahDana?.setOnClickListener {
-                openActivity(PindahDanaActivity::class.java)
-            }
-
-            // QRIS Button
-            val btnQRIS = buttonContainer?.getChildAt(1) as? AppCompatButton
-            btnQRIS?.setOnClickListener {
-                openActivity(QRISActivity::class.java)
-            }
-        }
     }
 
     // ==================== Service Cards (Grid Menu) ====================
@@ -146,7 +123,7 @@ class HomeFragment : Fragment() {
 
             // Riwayat (fourth item - index 3)
             bottomNavLayout?.getChildAt(3)?.setOnClickListener {
-                openActivity(RiwayatActivity::class.java)
+                openActivity(riwayatAct::class.java)
             }
 
             // Profil (fifth item - index 4)

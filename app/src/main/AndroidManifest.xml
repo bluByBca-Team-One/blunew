@@ -12,25 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BcaBlu1">
 
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
-        <activity android:name=".fragment_home" />
-        <activity android:name=".SavingActivity" />
-        <activity android:name=".BluinvestActivity" />
-        <activity android:name=".InsuranceActivity" />
-        <activity android:name=".KeuanganActivity" />
-        <activity android:name=".TransaksiActivity" />
-        <activity android:name=".MetodePembayaranActivity" />
-        <activity android:name=".RiwayatActivity" />
-        <activity android:name=".ProfilActivity" />
-        <activity android:name=".SecurityActivity" />
+        <activity
+            android:name=".TransaksiActivity"
+            android:launchMode="singleTop"
+            android:exported="false" />
+
+        <activity
+            android:name=".KeuanganActivity"
+            android:launchMode="singleTop"
+            android:exported="false" />
+
+        <activity
+            android:name=".RiwayatActivity"
+            android:launchMode="singleTop"
+            android:exported="false" />
+
+        <activity
+            android:name=".ProfilActivity"
+            android:launchMode="singleTop"
+            android:exported="false" />
 
     </application>
 
