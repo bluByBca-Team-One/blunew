@@ -1,14 +1,17 @@
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
-    namespace = "com.example.bluapp"
+
+    namespace = "com.example.myapplication2"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.bluapp"
+        applicationId = "com.example.myapplication2"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -26,14 +29,15 @@ android {
             )
         }
     }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-
     kotlinOptions {
         jvmTarget = "11"
+    }
+    buildFeatures {
+        viewBinding = true // Disarankan aktif untuk memudahkan akses view
     }
 }
 
@@ -41,10 +45,9 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
 }

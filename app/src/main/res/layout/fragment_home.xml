@@ -15,7 +15,6 @@
         android:background="@drawable/bg_header_curved"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
         android:id="@+id/tvAvatar"
         android:layout_width="40dp"

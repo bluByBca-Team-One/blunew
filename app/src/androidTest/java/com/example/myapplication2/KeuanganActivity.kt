@@ -1,4 +1,4 @@
-package com.example.bluapp
+package com.example.myapplication2
 
 import android.graphics.Color
 import android.os.Bundle

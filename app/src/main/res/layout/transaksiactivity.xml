@@ -2,11 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
-    tools:context=".TransaksiActivity">
+    android:background="#F5F5F5">
 
     <!-- Top Header Background -->
     <View
@@ -239,7 +237,7 @@
                             android:src="@android:drawable/ic_menu_send"
                             app:tint="#00BCD4"
                             android:padding="8dp"
-                            android:background="@drawable/circle_background"/>
+                            android:background="@drawable/circle_icon_bg"/>
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -292,7 +290,7 @@
                             android:src="@android:drawable/ic_input_add"
                             app:tint="#4CAF50"
                             android:padding="8dp"
-                            android:background="@drawable/circle_background"/>
+                            android:background="@drawable/circle_background_blue"/>
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -345,7 +343,7 @@
                             android:src="@android:drawable/ic_menu_gallery"
                             app:tint="#FF9800"
                             android:padding="8dp"
-                            android:background="@drawable/circle_background"/>
+                            android:background="@drawable/circle_background_blue"/>
 
                         <LinearLayout
                             android:layout_width="0dp"

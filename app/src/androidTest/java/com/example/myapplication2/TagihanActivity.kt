@@ -1,4 +1,4 @@
-package com.example.bluapp
+package com.example.myapplication2
 
 import android.content.Intent
 import android.os.Bundle
@@ -18,7 +18,7 @@ class TagihanActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tagihan)
+        setContentView(R.layout.tagihanactivity)
 
         // Setup ActionBar
         supportActionBar?.apply {
@@ -136,12 +136,7 @@ class TagihanActivity : AppCompatActivity() {
     /**
      * Navigate ke HistoryActivity
      */
-    private fun navigateToHistory() {
-        val intent = Intent(this, HistoryActivity::class.java).apply {
-            putExtra("filter_type", "TAGIHAN")
-        }
-        startActivity(intent)
-    }
+    
 
     /**
      * Navigate ke MainActivity

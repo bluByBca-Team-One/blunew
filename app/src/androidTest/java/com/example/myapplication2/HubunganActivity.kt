@@ -1,5 +1,5 @@
 
-package com.example.bluapp
+package com.example.myapplication2
 
 import android.content.Intent
 import android.os.Bundle

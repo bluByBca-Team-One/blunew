@@ -1,4 +1,4 @@
-package com.example.bluapp
+package com.example.myapplication2
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,13 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.appcompat.widget.AppCompatButton
-import androidx.cardview.widget.CardView
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class HomeFragment : Fragment() {
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,77 +23,51 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-
-        // Initialize all views
         initializeViews(view)
-
         return view
     }
 
     private fun initializeViews(view: View) {
-
-
-        // Tab Switch (Akun / Kartu)
         setupTabSwitch(view)
-
-
-        // Service Cards (Grid Menu)
         setupServiceCards(view)
-
-        // Bottom Navigation
         setupBottomNavigation(view)
 
-        // FAB
-        setupFAB(view)
     }
 
-
-    // ==================== Tab Switch (Akun / Kartu) ====================
     private fun setupTabSwitch(view: View) {
         val tabSwitch = view.findViewById<LinearLayout>(R.id.tabSwitch)
-
-        // Akun Tab (first TextView)
-        val btnAkun = tabSwitch.getChildAt(0) as? TextView
+        val btnAkun = tabSwitch?.getChildAt(0) as? TextView
         btnAkun?.setOnClickListener {
             openActivity(ProfilActivity::class.java)
         }
-
-
     }
 
     private fun setupServiceCards(view: View) {
-        // Saving
         view.findViewById<MaterialCardView>(R.id.cardSaving)?.setOnClickListener {
             openActivity(SavingActivity::class.java)
         }
 
-        // bluInvest
         view.findViewById<MaterialCardView>(R.id.cardBluinvest)?.setOnClickListener {
             openActivity(BluinvestActivity::class.java)
         }
 
-        // Insurance
         view.findViewById<MaterialCardView>(R.id.cardInsurance)?.setOnClickListener {
             openActivity(InsuranceActivity::class.java)
         }
 
-        // Keuangan
         view.findViewById<MaterialCardView>(R.id.cardKeuangan)?.setOnClickListener {
             openActivity(TagihanActivity::class.java)
         }
 
-        // Transaksi
         view.findViewById<MaterialCardView>(R.id.cardTransaksi)?.setOnClickListener {
             openActivity(HubunganActivity::class.java)
         }
 
-        // Metode Pembayaran
         view.findViewById<MaterialCardView>(R.id.cardMetodePembayaran)?.setOnClickListener {
             openActivity(MetodePembayaranActivity::class.java)
         }
     }
 
-    // ==================== Bottom Navigation ====================
     private fun setupBottomNavigation(view: View) {
         val bottomAppBar = view.findViewById<com.google.android.material.bottomappbar.BottomAppBar>(
             R.id.bottomAppBar
@@ -100,39 +76,26 @@ class HomeFragment : Fragment() {
         if (bottomAppBar != null) {
             val bottomNavLayout = bottomAppBar.getChildAt(0) as? LinearLayout
 
-            // Transaksi (first item)
             bottomNavLayout?.getChildAt(0)?.setOnClickListener {
                 openActivity(TransaksiActivity::class.java)
             }
 
-            // Keuangan (second item)
             bottomNavLayout?.getChildAt(1)?.setOnClickListener {
                 openActivity(KeuanganActivity::class.java)
             }
 
-            // Skip index 2 (FAB space)
-
-            // Riwayat (fourth item - index 3)
             bottomNavLayout?.getChildAt(3)?.setOnClickListener {
                 openActivity(RiwayatActivity::class.java)
             }
 
-            // Profil (fifth item - index 4)
             bottomNavLayout?.getChildAt(4)?.setOnClickListener {
                 openActivity(ProfilActivity::class.java)
             }
         }
     }
 
-    // ==================== FAB (Floating Action Button) ====================
-    private fun setupFAB(view: View) {
-        view.findViewById<FloatingActionButton>(R.id.fab)?.setOnClickListener {
-            // FAB biasanya untuk aksi utama, misal QR Scanner atau Home
-            openActivity(HomeFragment::class.java)
-        }
-    }
 
-    // ==================== Helper Function ====================
+
     private fun openActivity(activityClass: Class<*>) {
         val intent = Intent(requireContext(), activityClass)
         startActivity(intent)

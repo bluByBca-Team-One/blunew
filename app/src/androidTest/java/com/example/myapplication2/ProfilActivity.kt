@@ -1,5 +1,4 @@
-package com.example.bluapp
-
+package com.example.myapplication2
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
@@ -175,9 +174,6 @@ class ProfilActivity : AppCompatActivity() {
             navigateToKeuangan()
         }
 
-        navRiwayat.setOnClickListener {
-            navigateToRiwayat()
-        }
 
         navProfil.setOnClickListener {
             Toast.makeText(this, "Anda sudah di halaman Profil", Toast.LENGTH_SHORT).show()
