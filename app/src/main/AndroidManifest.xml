@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".fragment_home" />
         <activity android:name=".SavingActivity" />
         <activity android:name=".BluinvestActivity" />
         <activity android:name=".InsuranceActivity" />
