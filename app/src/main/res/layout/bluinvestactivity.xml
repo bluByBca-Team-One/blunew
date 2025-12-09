@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bluinvest"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blu_card_gray">
+
+    <!-- Top App Bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/teal_primary"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="@color/white"
+            android:contentDescription="Back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bluInvest"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Card Portofolio Saya -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPortofolio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <!-- Title -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Portofolio Saya"
+                        android:textColor="@color/text_black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="24dp"/>
+
+                    <!-- INTERACTIVE PIE CHART -->
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pieChartPortofolio"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:layout_marginBottom="32dp"/>
+
+                    <!-- Legend Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Legend Item 1: Saham -->
+                        <LinearLayout
+                            android:id="@+id/legendSaham"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+
+                            <!-- Color Indicator -->
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/bg_avatar_circle"
+                                android:backgroundTint="@color/teal_primary"/>
+
+                            <!-- Label -->
+                            <TextView
+                                android:id="@+id/tvLegendSaham"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="Saham"
+                                android:textColor="@color/text_black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+                            <!-- Percentage -->
+                            <TextView
+                                android:id="@+id/tvPercentSaham"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="45%"
+                                android:textColor="@color/text_black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <!-- Legend Item 2: Emas -->
+                        <LinearLayout
+                            android:id="@+id/legendEmas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="8dp"
+                            android:layout_marginTop="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+
+                            <!-- Color Indicator -->
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/bg_avatar_circle"
+                                android:backgroundTint="#FFD54F"/>
+
+                            <!-- Label -->
+                            <TextView
+                                android:id="@+id/tvLegendEmas"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="Emas"
+                                android:textColor="@color/text_black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+                            <!-- Percentage -->
+                            <TextView
+                                android:id="@+id/tvPercentEmas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="25%"
+                                android:textColor="@color/text_black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <!-- Legend Item 3: Crypto -->
+                        <LinearLayout
+                            android:id="@+id/legendCrypto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="8dp"
+                            android:layout_marginTop="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+
+                            <!-- Color Indicator -->
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/bg_avatar_circle"
+                                android:backgroundTint="#FF8A65"/>
+
+                            <!-- Label -->
+                            <TextView
+                                android:id="@+id/tvLegendCrypto"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="Crypto"
+                                android:textColor="@color/text_black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+                            <!-- Percentage -->
+                            <TextView
+                                android:id="@+id/tvPercentCrypto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20%"
+                                android:textColor="@color/text_black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <!-- Legend Item 4: Fiat -->
+                        <LinearLayout
+                            android:id="@+id/legendFiat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="8dp"
+                            android:layout_marginTop="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+
+                            <!-- Color Indicator -->
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/bg_avatar_circle"
+                                android:backgroundTint="#B0BEC5"/>
+
+                            <!-- Label -->
+                            <TextView
+                                android:id="@+id/tvLegendFiat"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="Fiat"
+                                android:textColor="@color/text_black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+                            <!-- Percentage -->
+                            <TextView
+                                android:id="@+id/tvPercentFiat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10%"
+                                android:textColor="@color/text_black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/bottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/teal_primary"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="24dp"
+            app:fabCradleVerticalOffset="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:id="@+id/navTransaksi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/stat_sys_upload"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Transaksi"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navKeuangan"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_my_calendar"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Keuangan"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/navRiwayat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_recent_history"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Riwayat"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navProfil"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_myplaces"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Profil"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_primary"
+            android:src="@drawable/logo5_foreground"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:fabCustomSize="60dp"
+            app:layout_anchor="@id/bottomAppBar"
+            app:maxImageSize="32dp"
+            app:tint="@color/white" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
