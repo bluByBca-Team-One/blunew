@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,7 +14,6 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -35,10 +33,14 @@
 
     <!-- SCROLL CONTENT -->
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        android:fillViewport="true">
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/headerContainer"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,43 +51,43 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:gravity="center_vertical"
+                android:orientation="horizontal"
                 android:paddingBottom="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Polis Saya"
-                    android:textStyle="bold"
                     android:textColor="#1A1A1A"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <Space
                     android:layout_width="0dp"
                     android:layout_height="1dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/btnBeliAsuransi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
                     android:background="@drawable/bg_input_rounded"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="8dp"
                     android:text="+ Beli Asuransi"
-                    android:textSize="14sp"
-                    android:textColor="#00A4B6"/>
+                    android:textColor="#00A4B6"
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="16dp">
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -96,37 +98,37 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
-                        android:gravity="center_vertical"
                         android:background="@drawable/bg_pill_teal"
+                        android:gravity="center_vertical"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp">
 
                         <ImageView
                             android:layout_width="18dp"
                             android:layout_height="18dp"
-                            android:src="@drawable/ic_kemanan"/>
+                            android:src="@drawable/ic_kemanan" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingLeft="8dp"
                             android:text="Asuransi Jiwa"
-                            android:textSize="14sp"
-                            android:textColor="#FFFFFF"/>
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
 
                         <Space
                             android:layout_width="0dp"
                             android:layout_height="1dp"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:padding="6dp"
                             android:background="@drawable/bg_capsule_outline_white"
+                            android:padding="6dp"
                             android:text="Aktif"
-                            android:textSize="12sp"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -139,23 +141,23 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="bluLife Guard"
-                            android:textStyle="bold"
+                            android:textColor="#1A1A1A"
                             android:textSize="16sp"
-                            android:textColor="#1A1A1A"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
                             android:text="No. Polis: POL-2024-001"
-                            android:textSize="13sp"
                             android:textColor="#777777"
-                            android:paddingTop="4dp"/>
+                            android:textSize="13sp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
                             android:gravity="center_vertical"
+                            android:orientation="horizontal"
                             android:paddingTop="12dp">
 
                             <TextView
@@ -163,56 +165,56 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Rp 150.000"
+                                android:textColor="#00A4B6"
                                 android:textSize="16sp"
-                                android:textStyle="bold"
-                                android:textColor="#00A4B6"/>
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="/ bulan"
-                                android:textSize="12sp"
-                                android:textColor="#555555"/>
+                                android:textColor="#555555"
+                                android:textSize="12sp" />
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
                             android:orientation="horizontal"
-                            android:paddingTop="16dp"
-                            android:gravity="center_vertical">
+                            android:paddingTop="16dp">
 
                             <ImageView
                                 android:layout_width="18dp"
                                 android:layout_height="18dp"
-                                android:src="@drawable/ic_calendar"/>
+                                android:src="@drawable/ic_calendar" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="10dp"
                                 android:text="Tagihan Berikut:"
-                                android:textSize="13sp"/>
+                                android:textSize="13sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="6dp"
                                 android:text="20 Nov 2025"
-                                android:textStyle="bold"
-                                android:textColor="#1A1A1A"/>
+                                android:textColor="#1A1A1A"
+                                android:textStyle="bold" />
 
                             <Space
                                 android:layout_width="0dp"
                                 android:layout_height="1dp"
-                                android:layout_weight="1"/>
+                                android:layout_weight="1" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Detail"
                                 android:textColor="#00A4B6"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -221,21 +223,22 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Asuransi disediakan oleh mitra terpercaya BCA Digital."
                 android:gravity="center"
                 android:padding="20dp"
+                android:text="Asuransi disediakan oleh mitra terpercaya BCA Digital."
                 android:textColor="#888888"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
 
         </LinearLayout>
     </ScrollView>
 
     <include
+        android:id="@+id/bottomNav"
         layout="@layout/bottom_nav"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
