@@ -57,10 +57,6 @@ class TransaksiActivity : AppCompatActivity() {
             Toast.makeText(this, "Anda sudah di halaman Transaksi", Toast.LENGTH_SHORT).show()
         }
 
-        // Keuangan - EXPLICIT INTENT
-        navKeuangan.setOnClickListener {
-            navigateToKeuangan()
-        }
 
         // Riwayat - EXPLICIT INTENT
         navRiwayat.setOnClickListener {
@@ -91,15 +87,6 @@ class TransaksiActivity : AppCompatActivity() {
     /**
      * EXPLICIT INTENT: Navigate to KeuanganActivity
      */
-    private fun navigateToKeuangan() {
-        val intent = Intent(this, KeuanganActivity::class.java).apply {
-            // Clear activities on top and don't create duplicate
-            flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-        }
-        startActivity(intent)
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-        finish() // Close current activity
-    }
 
     /**
      * EXPLICIT INTENT: Navigate to RiwayatActivity

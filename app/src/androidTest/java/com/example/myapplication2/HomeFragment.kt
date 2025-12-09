@@ -47,9 +47,6 @@ class HomeFragment : Fragment() {
             openActivity(SavingActivity::class.java)
         }
 
-        view.findViewById<MaterialCardView>(R.id.cardBluinvest)?.setOnClickListener {
-            openActivity(BluinvestActivity::class.java)
-        }
 
         view.findViewById<MaterialCardView>(R.id.cardInsurance)?.setOnClickListener {
             openActivity(InsuranceActivity::class.java)
@@ -80,9 +77,7 @@ class HomeFragment : Fragment() {
                 openActivity(TransaksiActivity::class.java)
             }
 
-            bottomNavLayout?.getChildAt(1)?.setOnClickListener {
-                openActivity(KeuanganActivity::class.java)
-            }
+
 
             bottomNavLayout?.getChildAt(3)?.setOnClickListener {
                 openActivity(RiwayatActivity::class.java)

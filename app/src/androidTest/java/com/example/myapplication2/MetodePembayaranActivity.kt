@@ -132,9 +132,6 @@ class MetodePembayaranActivity : AppCompatActivity() {
             showToast("Anda sudah di halaman Transaksi")
         }
 
-        navKeuangan.setOnClickListener {
-            navigateToKeuangan()
-        }
 
         navRiwayat.setOnClickListener {
             navigateToRiwayat()
@@ -180,11 +177,6 @@ class MetodePembayaranActivity : AppCompatActivity() {
     }
 
     // Navigation methods
-    private fun navigateToKeuangan() {
-        val intent = Intent(this, KeuanganActivity::class.java)
-        startActivity(intent)
-    }
-
     private fun navigateToRiwayat() {
         val intent = Intent(this, RiwayatActivity::class.java)
         startActivity(intent)
