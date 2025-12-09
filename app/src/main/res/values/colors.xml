@@ -56,4 +56,13 @@
     <color name="card_acc_bg">#F0F3F5</color>
     <color name="avatar_bg">#66CCDD</color>
     <color name="yellow_status">#FFD700</color>
+    <color name="zxing_custom_possible_result_points">#c0ffbd</color>
+    <color name="zxing_custom_result_view">#b0000000</color>
+    <color name="zxing_custom_viewfinder_laser">#00BCD4</color>
+    <color name="zxing_custom_viewfinder_mask">#60000000</color>
+
+
+    <color name="colorPrimary">#00BCD4</color>
+    <color name="colorPrimaryDark">#0097A7</color>
+    <color name="colorAccent">#FFC107</color>
 </resources>

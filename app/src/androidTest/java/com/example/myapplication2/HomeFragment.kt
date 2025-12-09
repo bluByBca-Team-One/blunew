@@ -34,8 +34,6 @@ class HomeFragment : Fragment() {
         // Tab Switch (Akun / Kartu)
         setupTabSwitch(view)
 
-        // Account Action Buttons
-        setupAccountActions(view)
 
         // Service Cards (Grid Menu)
         setupServiceCards(view)
@@ -55,19 +53,12 @@ class HomeFragment : Fragment() {
         // Akun Tab (first TextView)
         val btnAkun = tabSwitch.getChildAt(0) as? TextView
         btnAkun?.setOnClickListener {
-            openActivity(AkunActivity::class.java)
+            openActivity(ProfilActivity::class.java)
         }
 
-        // Kartu Tab (second TextView)
-        val btnKartu = tabSwitch.getChildAt(1) as? TextView
-        btnKartu?.setOnClickListener {
-            openActivity(KartuActivity::class.java)
-        }
-    }
 
     }
 
-    // ==================== Service Cards (Grid Menu) ====================
     private fun setupServiceCards(view: View) {
         // Saving
         view.findViewById<MaterialCardView>(R.id.cardSaving)?.setOnClickListener {
@@ -123,7 +114,7 @@ class HomeFragment : Fragment() {
 
             // Riwayat (fourth item - index 3)
             bottomNavLayout?.getChildAt(3)?.setOnClickListener {
-                openActivity(riwayatAct::class.java)
+                openActivity(RiwayatActivity::class.java)
             }
 
             // Profil (fifth item - index 4)
@@ -137,7 +128,7 @@ class HomeFragment : Fragment() {
     private fun setupFAB(view: View) {
         view.findViewById<FloatingActionButton>(R.id.fab)?.setOnClickListener {
             // FAB biasanya untuk aksi utama, misal QR Scanner atau Home
-            openActivity(HomeActivity::class.java)
+            openActivity(HomeFragment::class.java)
         }
     }
 

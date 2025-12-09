@@ -24,7 +24,7 @@ class DetailHubunganActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hubunganactivity)
 
-        // Get data from intent
+
         hubungan = intent.getParcelableExtra(HubunganActivity.EXTRA_HUBUNGAN)
             ?: run {
                 showToast("Data tidak ditemukan")

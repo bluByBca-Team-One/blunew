@@ -20,7 +20,7 @@ class DetailTagihanActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
         }
 
-        // Ambil data dari intent
+
         val jenisBill = intent.getStringExtra(TagihanActivity.EXTRA_JENIS_BILL) ?: ""
         val billId = intent.getStringExtra(TagihanActivity.EXTRA_BILL_ID) ?: ""
         val amount = intent.getIntExtra(TagihanActivity.EXTRA_AMOUNT, 0)
