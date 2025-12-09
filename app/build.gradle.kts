@@ -4,10 +4,16 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapplication2"
-    compileSdk {
-        version = release(36)
-    }
+    android {
+        namespace = "com.example.bluapp"  // Namespace pindah ke sini
+        compileSdk = 34
+
+        defaultConfig {
+            applicationId = "com.example.bluapp"
+            minSdk = 24
+            targetSdk = 34
+            versionCode = 1
+            versionName = "1.0"
 
     defaultConfig {
         applicationId = "com.example.myapplication2"
